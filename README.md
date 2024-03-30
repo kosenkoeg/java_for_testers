@@ -1,1 +1,1 @@
-#Java для тестеровшиков
+#Java for testers
