@@ -13,25 +13,25 @@ public class Triangle {
     }
 
     public static void printTriangleArea(Triangle t) {
-        var text = String.format("Площадь треугольника со сторонами %f, %f и %f = %f", t.side1, t.side2, t.side3, Math.sqrt(t.Area()));
+        var text = String.format("Площадь треугольника со сторонами %f, %f и %f = %f", t.side1, t.side2, t.side3, t.area());
         System.out.println(text);
     }
 
     public static void printTrianglePerimeter(Triangle t) {
-        var text = String.format("Периметр треугольника со сторонами %f, %f и %f = %f", t.side1, t.side2, t.side3, t.Perimeter());
+        var text = String.format("Периметр треугольника со сторонами %f, %f и %f = %f", t.side1, t.side2, t.side3, t.perimeter());
         System.out.println(text);
     }
 
     public double semiPerimeter() {
-        return (this.side1 + this.side2 + this.side3) / 2 ;
+        return perimeter() / 2 ;
     }
 
-    public double Area() {
+    public double area() {
         var p = semiPerimeter();
-        return p * (p - this.side1) * (p - this.side2) * (p - this.side3);
+        return Math.sqrt(p * (p - this.side1) * (p - this.side2) * (p - this.side3));
     }
 
-    public double Perimeter() {
+    public double perimeter() {
         return this.side1 + this.side2 + this.side3;
     }
 }

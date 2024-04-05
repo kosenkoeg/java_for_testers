@@ -8,12 +8,12 @@ public class TriangleTests {
     @Test
     void canCalculateArea() {
         var t = new Triangle(6.0, 8.0, 10.0);
-        double result = Math.sqrt(t.Area());
+        double result = t.area();
         Assertions.assertEquals(24.0, result);
     }
 
     @Test
     void canCalculatePerimeter() {
-        Assertions.assertEquals(24.0, new Triangle(6.0, 8.0, 10.0).Perimeter());
+        Assertions.assertEquals(24.0, new Triangle(6.0, 8.0, 10.0).perimeter());
     }
 }
